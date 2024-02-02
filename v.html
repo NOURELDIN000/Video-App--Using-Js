@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="v.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <section id="mainwrapper">
+        <section id="b-sec">
+        
+
+        <ul class="ul-sec">
+            <li> <input type="button" value="video 1" id="btn-one" onclick="playVideo('Video/d.mp4')"  /></li>
+            <li> <input type="button" value="video 2" id="btn-two" onclick="playVideo('Video/universe.mp4')" /></li>
+            <li> <input type="button" value="video 3" id="btn-three" onclick="playVideo('Video/d.mp4')" /></li>
+            <li> <input type="button" value="video 4" id="btn-four" onclick="playVideo('Video/universe.mp4')" /></li>
+            <li> <input type="button" value="video 5"  id="btn-five" onclick="playVideo('Video/d.mp4')" /></li>
+            <li> <input type="button" value="video 6"  id="btn-six" onclick="playVideo('Video/universe.mp4')" /></li>
+            <li> <input type="button" value="video 7"  id="btn-seven" onclick="playVideo('Video/d.mp4')" /></li>
+            <li> <input type="button" value="video 8"  id="btn-eight" onclick="playVideo('Video/universe.mp4')" /></li>
+            <li> <input type="button" value="video 9" id="btn-nine" onclick="playVideo('Video/d.mp4')" /></li>
+            <li> <input type="button" value="video 10"  id="btn-ten" onclick="playVideo('Video/universe.mp4')" /></li>
+        
+        </ul>                                        
+        </section>
+
+    <section id="videowrapper">
+        <!-- <video src="Video/d.mp4" id="myvideo" width="500" height="800" id="myvideo" onclick="pause()" ondblclick="fullscreen()"  onclick="" > -->
+        <!-- <video src="Video/universe.mp4"  width="500" height="800" id="myvideo-two" onclick="pause()" ondlclick="fullscreenTwo()"   > -->
+        <video  id="myvideo" width="500" height="800" id="myvideo"  ondblclick="fullscreen()"  onclick="" >
+    
+    
+    </section>
+
+    </section>
+    <script >
+        
+    const myvideo = document.getElementById('myvideo');
+
+function playVideo(src) {
+    myvideo.src = src;
+    myvideo.play();
+}
+
+
+function toggleVideo() {
+        if (myvideo.paused) {
+            myvideo.play();
+        } else {
+            myvideo.pause();
+        }
+    }
+    myvideo.addEventListener('click', toggleVideo);
+function fullscreen(){
+myvideo.requestFullscreen();
+}
+
+function fullscreenTwo(){
+    myvideoTwo.requestFullscreen();
+}
+
+
+
+</script>
+</body>
+</html>
